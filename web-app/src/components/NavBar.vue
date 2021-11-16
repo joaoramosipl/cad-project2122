@@ -1,5 +1,7 @@
 <template>
-  <nav></nav>
+  <nav>
+      <button class="btn btn-success">ola</button>
+  </nav>
 </template>
 
 <script>
