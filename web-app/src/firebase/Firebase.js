@@ -1,7 +1,9 @@
 import { initializeApp } from 'firebase/app';
-import firebaseConfig from './FirebaseConfig.js'
 import { getDatabase } from 'firebase/database';
 
-const app = initializeApp(firebaseConfig);
+import firebaseConfig from './FirebaseConfig.js'
 
-export default getDatabase(app)
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app)
+
+export default {database, app}

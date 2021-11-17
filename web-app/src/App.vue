@@ -5,14 +5,11 @@
 
 <script>
 import NavBar from "./components/NavBar.vue";
-import database from "./firebase/Firebase.js";
+// import { database } from "./firebase/Firebase.js";
 export default {
   name: "App",
   components: {
     NavBar,
-  },
-  mounted() {
-    console.log(database);
-  },
+  }
 };
 </script>
