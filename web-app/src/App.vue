@@ -1,15 +1,18 @@
 <template>
- <NavBar></NavBar>
-
+  <NavBar></NavBar>
+  <i class="fas fa-lightbulb"></i>
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue'
-
+import NavBar from "./components/NavBar.vue";
+import database from "./firebase/Firebase.js";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    NavBar
-  }
-}
+    NavBar,
+  },
+  mounted() {
+    console.log(database);
+  },
+};
 </script>
