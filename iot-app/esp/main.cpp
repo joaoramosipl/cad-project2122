@@ -126,9 +126,9 @@ void setup()
     {
       dataMillis = millis();
       
-      Serial.printf("Get int... %s\n", Firebase.RTDB.getInt(&fbdo, "/actuator1/value") ? String(fbdo.to<int>()).c_str() : fbdo.errorReason().c_str());
+      Serial.printf("Get int... %s\n", Firebase.RTDB.getInt(&fbdo, "actuators/actuator1/value") ? String(fbdo.to<int>()).c_str() : fbdo.errorReason().c_str());
       actuator1Status = fbdo.to<int>();
 
-      Serial.printf("Set int... %s\n", Firebase.RTDB.setInt(&fbdo, "/sensor1/value", tempValue) ? "ok" : fbdo.errorReason().c_str());
+      Serial.printf("Set int... %s\n", Firebase.RTDB.setInt(&fbdo, "sensors/sensor1/value", tempValue) ? "ok" : fbdo.errorReason().c_str());
     }
 }
