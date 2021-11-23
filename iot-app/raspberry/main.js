@@ -1,27 +1,26 @@
 const { Gpio } = require('onoff');
-var firebase = require("firebase-admin");
+const firebase = require('firebase-admin');
 var serviceAccount = require("./serviceAccountKey.json");
 
 firebase.initializeApp({
     credential: firebase.credential.cert(serviceAccount),
     databaseURL: "https://cad2122-default-rtdb.firebaseio.com"
-}); 
+});
 
 
 firebase.database().ref('/sensors/sensor1')
     .on('value', function (snapshot) {
-        console.log(snapshot.val().value);
+        if (snapshot.exists()) {
+            console.log(snapshot.val().value);
+        }
     });
 
 
-    
+
 firebase.database().ref('/sensors/sensor1').set({
     value: 10,
     dateTime: new Date().toISOString()
 });
-
-
-
 
 
 const ledOut = new Gpio('17', 'out'); let isLedOn = false;
