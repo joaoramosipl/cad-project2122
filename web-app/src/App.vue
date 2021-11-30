@@ -1,6 +1,6 @@
 <template>
   <NavBar></NavBar>
-  <i class="fas fa-lightbulb"></i>
+  <router-view></router-view>
 </template>
 
 <script>

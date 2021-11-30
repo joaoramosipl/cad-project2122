@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Air Temperature",
+        "path": "/sensor1",
+        "type": "sensor"
+    },
+    {
+        "name": "Water Pump",
+        "path": "/actuator1",
+        "type": "actuator"
+    }
+]
