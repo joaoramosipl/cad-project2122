@@ -1,7 +1,7 @@
 [
     {
-        "name": "Air Temperature",
-        "path": "/sensor1",
+        "name": "Sensor de Humidade",
+        "path": "sensors/sensor1/hum",
         "type": "sensor"
     },
     {
